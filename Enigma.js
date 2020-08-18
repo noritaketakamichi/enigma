@@ -22,7 +22,7 @@ class Scranbler {
             }
             scrambleNumArr.push(num);
         }
-        // console.log(scrambleNumArr);
+        console.log(scrambleNumArr);
 
         this.scrambleArr = scrambleNumArr;
         this.count = 0;
@@ -87,7 +87,8 @@ function encodeStr(str) {
     const encode1 = test1.encode(str)
     const encode2 = test2.encode(encode1)
     const encode3 = test3.encode(encode2)
-    // console.log(`${encode1},${encode2},${encode3}`)
+    console.log(`   ${str} => ${encode1} => ${encode2} => ${encode3}`)
+
     return encode3;
 }
 
@@ -95,7 +96,7 @@ function decodeStr(str) {
     const decode1 = test3.decode(str)
     const decode2 = test2.decode(decode1)
     const decode3 = test1.decode(decode2)
-    // console.log(`${decode1},${decode2},${decode3}`)
+    console.log(`   ${str} => ${decode1} => ${decode2} => ${decode3}`)
     return decode3;
 }
 
